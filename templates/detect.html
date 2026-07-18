@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TruthLens | Detect Fake News</title>
+
+    <link rel="stylesheet" href="../static/css/detect.css">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <nav>
+
+        <div class="logo">
+            🤖 TruthLens
+        </div>
+
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/history">History</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/">Logout</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="detect-box">
+
+        <h1>AI Fake News Detector</h1>
+
+        <p>
+            Paste the URL of a news article and let AI analyze it.
+        </p>
+
+        <form action="/result" method="POST">
+
+            <input
+                type="url"
+                name="url"
+                placeholder="https://example.com/news/article"
+                style="width:100%;padding:15px;border-radius:10px;font-size:16px;">
+
+            <br><br>
+            <br><br>
+
+<p>OR</p>
+
+<br>
+
+<textarea
+    name="news"
+    placeholder="Paste the news article here (optional)"
+    rows="8"
+    style="width:100%; padding:15px; border-radius:10px; font-size:16px;"></textarea>
+            <button type="submit">
+                Analyze URL
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

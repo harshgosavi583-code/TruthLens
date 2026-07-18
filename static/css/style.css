@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background-image:url("https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2019/11/whatsapp-image-2019-11-24-at-16-1574593427.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    height:100vh;
+
+}
+
+.overlay{
+
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,0.72);
+
+}
+
+nav{
+
+    width:100%;
+
+    padding:25px 80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    color:#00cfff;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+}
+
+nav ul li{
+
+    margin-left:40px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#00cfff;
+
+}
+
+.hero{
+
+    width:70%;
+
+    margin:auto;
+
+    height:80vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero h1{
+
+    font-size:90px;
+
+    color:#00cfff;
+
+    margin-bottom:20px;
+
+}
+
+.hero h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    line-height:38px;
+
+    margin-bottom:40px;
+
+    width:80%;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn1{
+
+    background:#00cfff;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.btn1:hover{
+
+    background:white;
+
+    color:#00cfff;
+
+}
+
+.btn2{
+
+    background:transparent;
+
+    color:white;
+
+    border:2px solid white;
+
+    padding:16px 40px;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.btn2:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+.hero h4{
+
+    margin-top:40px;
+
+    color:#d0d0d0;
+
+    letter-spacing:1px;
+
+}

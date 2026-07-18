@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthLens | Register</title>
+
+    <link rel="stylesheet" href="../static/css/register.css">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="register-box">
+
+        <h1>🤖 TruthLens</h1>
+
+        <h2>Create Account</h2>
+
+        <p>Create your account to start detecting fake news.</p>
+
+        <!-- Error or Success Message -->
+        {% if message %}
+            <p style="color:red; font-weight:bold;">{{ message }}</p>
+        {% endif %}
+
+        <form action="/register" method="POST">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Full Name"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   placeholder="Email Address"
+                   required>
+
+            <input type="password"
+                   name="password"
+                   placeholder="Password"
+                   required>
+
+            <input type="password"
+                   name="confirm_password"
+                   placeholder="Confirm Password"
+                   required>
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+        <p class="login">
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+
+        <a href="/" class="back">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
