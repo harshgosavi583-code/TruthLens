@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthLens | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dashboard.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🛡️ TruthLens Admin Dashboard</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>{{ total_users }}</h2>
+            <p>👥 Total Users</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ total_logins }}</h2>
+            <p>🔐 Total Logins</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ total_checks }}</h2>
+            <p>📰 News Checked</p>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <div style="text-align:center;">
+
+        <a href="/users">
+            <button>👥 View Users</button>
+        </a>
+
+        <a href="/login-history">
+            <button>🔐 Login History</button>
+        </a>
+
+        <a href="/history">
+            <button>📰 Detection History</button>
+        </a>
+
+        <a href="/">
+            <button>🚪 Logout</button>
+        </a>
+
+    </div>
+
+    <br><br>
+
+    <div style="width:90%;margin:auto;background:white;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.15);">
+
+        <canvas id="statsChart"></canvas>
+
+    </div>
+
+</div>
+
+<script>
+
+const ctx = document.getElementById('statsChart');
+
+new Chart(ctx, {
+
+    type: 'bar',
+
+    data: {
+
+        labels: [
+            'Users',
+            'Logins',
+            'News Checks'
+        ],
+
+        datasets: [{
+
+            label: 'TruthLens Statistics',
+
+            data: [
+                {{ total_users }},
+                {{ total_logins }},
+                {{ total_checks }}
+            ],
+
+            backgroundColor: [
+                '#0d6efd',
+                '#198754',
+                '#ffc107'
+            ],
+
+            borderColor: [
+                '#0d6efd',
+                '#198754',
+                '#ffc107'
+            ],
+
+            borderWidth: 1,
+
+            borderRadius: 12
+
+        }]
+    },
+
+    options: {
+
+        responsive: true,
+
+        plugins: {
+
+            legend: {
+                display: true
+            }
+
+        },
+
+        scales: {
+
+            y: {
+                beginAtZero: true
+            }
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

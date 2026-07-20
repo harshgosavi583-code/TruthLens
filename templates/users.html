@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Users</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f4f6f9;
+            padding:40px;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        table{
+            width:90%;
+            margin:auto;
+            border-collapse:collapse;
+            background:white;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#0d6efd;
+            color:white;
+        }
+
+        tr:nth-child(even){
+            background:#f8f8f8;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        button{
+            margin-top:25px;
+            padding:10px 20px;
+            font-size:16px;
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>👥 Registered Users</h1>
+
+<table>
+
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Action</th>
+</tr>
+
+{% for user in users %}
+
+<tr>
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.role }}</td>
+    <td>
+        <a href="/delete-user/{{ user.email }}"
+           onclick="return confirm('Delete this user?')">
+            🗑 Delete
+        </a>
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<center>
+    <a href="/admin">
+        <button>⬅ Back to Dashboard</button>
+    </a>
+</center>
+
+</body>
+</html>
